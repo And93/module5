@@ -1,0 +1,15 @@
+{
+  "name": "module5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run:server": "run.bat",
+    "test": "node webdriverJsTest.js"
+  },
+  "author": "Andrei Dzeichyk",
+  "license": "ISC",
+  "dependencies": {
+    "selenium-webdriver": "3.6.0"
+  }
+}
