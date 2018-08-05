@@ -1,0 +1,15 @@
+{
+  "name": "protractor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "wdmanager": "webdriver-manager update & webdriver-manager start",
+    "test": "protractor conf.js"
+  },
+  "author": "Andrei Dzeichyk",
+  "license": "ISC",
+  "dependencies": {
+    "protractor": "5.4.0"
+  }
+}

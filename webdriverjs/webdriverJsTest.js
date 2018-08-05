@@ -24,8 +24,10 @@ function assertVisibilityOfElement(element, isVisible) {
                     throw new Error(`Element: ${element} is: ${result} visible, but must be: ${isVisible}`)
                 }
             })
-        );
-};
+            .catch(e => new Error(e))
+        )
+        .catch(e => new Error(e));
+}
 
 async function scrollToElement(element) {
     const elem = await browser.findElement(webdriver.By.css(element));
@@ -41,8 +43,10 @@ async function searchResultTile(text) {
                     throw new Error(`Text into header is: ${textInElement}, but must be: ${regExp}`)
                 }
             })
-        );
-};
+            .catch(e => new Error(e))
+        )
+        .catch(e => new Error(e));
+}
 
 
 browser.get('https://www.epam.com');
