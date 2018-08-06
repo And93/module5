@@ -34,11 +34,11 @@ async function scrollToElement(element) {
     browser.executeScript('arguments[0].scrollIntoView(true);', elem);
 }
 
-async function searchResultTile(text) {
+async function assertSearchResultTile(text) {
     browser.findElement(webdriver.By.className('search-result__heading'))
         .then(element =>  element.getText()
             .then(textInElement => {
-                const regExp = new RegExp(`WE FOUND [0-9]+ JOB OPENINGS${' ' + text}`);
+                const regExp = new RegExp(`WE FOUND [0-9]+ JOB OPENINGS RELATED TO "${text.toUpperCase()}"`);
                 if (textInElement.search(regExp) === -1) {
                     throw new Error(`Text into header is: ${textInElement}, but must be: ${regExp}`)
                 }
@@ -57,5 +57,5 @@ scrollToElement('.section__icon-plus');
 browser.findElement(webdriver.By.css('.button-ui.bg-color-white[href="/careers"]')).click();
 browser.findElement(webdriver.By.css('[placeholder="Keyword or job ID"]')).sendKeys('Test Automation Engineer');
 browser.findElement(webdriver.By.className('job-search__submit')).click();
-searchResultTile('RELATED TO "TEST AUTOMATION ENGINEER"');
+assertSearchResultTile('Test Automation Engineer');
 closeBrowser();
