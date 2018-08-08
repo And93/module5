@@ -11,7 +11,7 @@ const SIZE_OF_WINDOW = {
         width: 1920,
         height: 1080
     }
-}
+};
 
 exports.config = {
 

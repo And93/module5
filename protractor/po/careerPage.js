@@ -8,7 +8,7 @@ class CareerPage {
         this.submitButton = $('.recruiting-search__submit');
 
         this.searchResult = $('.search-result__heading');
-    }
+    };
 
     load() {
         browser.get('careers');

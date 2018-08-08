@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "chai": "4.1.2",
-    "chai-as-promised": "^7.1.1",
+    "chai-as-promised": "7.1.1",
     "cucumber": "4.2.1",
     "protractor": "5.4.0",
     "protractor-cucumber-framework": "6.0.0"
